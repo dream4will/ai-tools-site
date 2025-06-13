@@ -360,18 +360,6 @@
     "description": "YouTube总结功能非常好用。可以用自己的API key，调GPT，用得不多的话，更省钱。"
   },
   {
-    "name": "沉浸式翻译",
-    "category": "AI翻译, AI 套壳插件",
-    "audience": "普罗大众",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://immersivetranslate.com/",
-    "platform": "网页端, iOS端, 安卓端",
-    "free": "支持免费",
-    "price": "¥48.3/月 起\n免费版够用了",
-    "difficulty": "简单，国内团队",
-    "description": "双语字幕。支持PDF全翻译，在浏览器内打开线上的PDF论文，插件会创建新的并排界面，双语阅读。"
-  },
-  {
     "name": "Trancy",
     "category": "AI翻译, AI 套壳插件",
     "audience": "普罗大众",
@@ -612,30 +600,6 @@
     "description": "一站式调用基本市面上所有最强大的大模型，开源的商业的都有。API大集成。"
   },
   {
-    "name": "Monica",
-    "category": "AI大模型集合, AI 套壳插件, AII in One",
-    "audience": "普罗大众",
-    "rating": "🌟🌟🌟",
-    "link": "https://monica.im/home",
-    "platform": "作为插件, MAC端, Windows",
-    "free": "支持免费",
-    "price": "$39.9/月起 \n\n有免费额度，但不多。 每个月有40次免费搜索。",
-    "difficulty": "🌟🌟，虽然是国内团队",
-    "description": "集大成的AI工具，一站式调用所有大模型，包括AI绘画，总结PDF、网页总结、油管总结等，基本文字处理的功能都有。\n\n就是偏贵。"
-  },
-  {
-    "name": "Sider",
-    "category": "AI 套壳插件, AI大模型集合, AII in One",
-    "audience": "普罗大众",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://sider.ai/",
-    "platform": "网页端, MAC端, Windows, iOS端, 安卓端",
-    "free": "支持免费",
-    "price": "$10/月起，有多种付费方案\n\n支持免费用",
-    "difficulty": "✔️简单，国内团队",
-    "description": "YouTube总结功能非常好用。可以用自己的API key，调GPT，用得不多的话，更省钱。"
-  },
-  {
     "name": "ChatHub",
     "category": "AII in One, AI大模型集合",
     "audience": "普罗大众",
@@ -646,18 +610,6 @@
     "price": "$19/月起\n\n",
     "difficulty": "✔️简单，国内团队",
     "description": "支持一次性横向测试和对比6个大模型的生成效果。国内可用。"
-  },
-  {
-    "name": "Trancy",
-    "category": "AI翻译, AI 套壳插件",
-    "audience": "普罗大众",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://www.trancy.org/download",
-    "platform": "网页端, iOS端, 安卓端, 作为插件",
-    "free": "支持免费",
-    "price": "$2.69/月 🆚 $ 25.99/年\n\n免费版够用了",
-    "difficulty": "简单，国内团队",
-    "description": "作为插件支持Chrome、Edge、Firefox、Arc、Safari等浏览器，双语字幕，无压力看油管外文视频。英语学习神器，阅读模式可以快速“看”完视频，适合长播客。阅读外文文章时，也可以右键一键双语翻译。"
   },
   {
     "name": "沉浸式翻译",
