@@ -192,18 +192,6 @@
     "description": "支持克隆音色和内置音色。提供文生音、声音克隆和音转音功能。最低配置要求为8GB显存，占用26GB空间。操作难度中等。特色包括3秒急速复刻和提示词语气功能。"
   },
   {
-    "name": "GPT-SOVITS",
-    "category": "AI克隆音色",
-    "audience": "内容创作者",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://github.com/RVC-Boss/GPT-SoVITS",
-    "platform": "电脑本地部署",
-    "free": "支持免费",
-    "price": "开源",
-    "difficulty": "需要登得上Github",
-    "description": "大佬花儿不哭的开源项目，本地部署，声音克隆效果非常不错。"
-  },
-  {
     "name": "ChatTTS",
     "category": "AI克隆音色",
     "audience": "内容创作者",
@@ -552,30 +540,6 @@
     "description": "搜索结果以结构化的方式呈现，对于信息的呈现非常直观。一目了然，然后搜索的结果也很不错。"
   },
   {
-    "name": "Chat GPT ",
-    "category": "AI搜索, AI文本生成, AI Chatbot",
-    "audience": "普罗大众, 程序员",
-    "rating": "🌟🌟🌟🌟🌟",
-    "link": "https://chat.openai.com/",
-    "platform": "网页端, iOS端, 安卓端",
-    "free": "支持免费",
-    "price": "$19.99/月\n\nGPT 3.5 支持免费用（不限）GPT-4o也有免费使用额度",
-    "difficulty": "🌟🌟，海外网站，支持免账号登录，如果要注册账号需要邮件验证，可用美区苹果账号充值",
-    "description": "当下最强大的大模型。最新的GPT-4o能看能听能说，多模态能力进一步加强。联网的GPT4回答的可用性比较高，加上GPTs拓展了Chat GPT的各种使用场景，使用DALL·E、进阶的数据分析等功能都比较值。\n\n更新：数据分析、文件上传、联网功能、使用GPTs和GPT Store、生成图片、记忆功能这部分也将开放给免费用户"
-  },
-  {
-    "name": "Claude",
-    "category": "AI文本生成, AI Chatbot",
-    "audience": "程序员, 普罗大众",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://claude.ai/",
-    "platform": "iOS端, 网页端",
-    "free": "支持免费",
-    "price": "$20/月",
-    "difficulty": "🌟🌟🌟🌟🌟，海外网站，有严格的IP地区限制，需要海外☎️验证。☹️",
-    "description": "最强的Opus基准测试跑分均超过了GPT-4，读专业论文、图表、长文本分析样样在行。支持200K上下文窗口，但国内想用上Claude真的是很难。"
-  },
-  {
     "name": "Gemini",
     "category": "AI搜索, AI文本生成, AI Chatbot",
     "audience": "普罗大众",
@@ -804,18 +768,6 @@
     "description": "比起Chat GPT有历史记录可以随时回看，Notion每一次生成都是新的，比较割裂。那么它的优势在哪呢？将AI融入你的笔记工作流中，可以利用现有的笔记和文档资料，来帮你进行总结、翻译，或者生成表格。全局都可以调用。可以用它来总结笔记大纲、阅读助手、辅助文档写作、更改语气、语法检查等。"
   },
   {
-    "name": "通义千问",
-    "category": "AI写作, AI文本生成, AI图片生成, AI视频生成",
-    "audience": "大学生/科研, 打工人, 普罗大众, 内容创作者",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://tongyi.aliyun.com/qianwen",
-    "platform": "MAC端, Windows, iOS端, 安卓端, 网页端",
-    "free": "支持免费",
-    "price": "还没开始收费",
-    "difficulty": "简单，国内可用",
-    "description": "更适合中国宝宝的AI文本生成工具，公文写作、新闻稿等套路性文本非常擅长。"
-  },
-  {
     "name": "copy.ai",
     "category": "AI写作",
     "audience": "电商, 内容创作者, 零售, 打工人, 大学生/科研",
@@ -852,30 +804,6 @@
     "description": "无"
   },
   {
-    "name": "Suno",
-    "category": "AI音乐生成",
-    "audience": "内容创作者",
-    "rating": "🌟🌟🌟🌟🌟",
-    "link": "https://suno.com/",
-    "platform": "网页端",
-    "free": "支持免费",
-    "price": "$10/月起（500首歌），有多种付费方案\n\n免费版有十首歌的生成额度",
-    "difficulty": "🌟🌟，海外网站，支持谷歌账号登录，不需要外国☎️验证",
-    "description": "目前最好的音乐生成AI，可以生成有歌词、人声的歌曲，也可以生成没有歌词的纯音乐。"
-  },
-  {
-    "name": "Stable Audio",
-    "category": "AI音乐生成",
-    "audience": "内容创作者",
-    "rating": "🌟🌟🌟",
-    "link": "https://stability.ai/stable-audio",
-    "platform": "网页端",
-    "free": "支持免费",
-    "price": "$11.99/月起，每个月有500次的生成额度。\n\n免费版每个月有20次的生成额度。",
-    "difficulty": "🌟🌟，海外网站，支持谷歌账号登录，不需要外国☎️验证",
-    "description": "可以上传音乐文件，让AI来借鉴风格。"
-  },
-  {
     "name": "Tome",
     "category": "AI PPT生成",
     "audience": "打工人",
@@ -886,18 +814,6 @@
     "price": "$20/月，$192/年",
     "difficulty": "🌟🌟，海外网站，支持谷歌账号登录，不需要外国☎️验证",
     "description": "美观度和易用性均不如Gamma，还更贵。"
-  },
-  {
-    "name": "Gamma",
-    "category": "AI PPT生成, AI网页生成",
-    "audience": "打工人, 大学生/科研",
-    "rating": "🌟🌟🌟🌟",
-    "link": "https://gamma.app/",
-    "platform": "网页端",
-    "free": "支持免费",
-    "price": "$10/月起，$72/年起\n\n免费版有400 credits",
-    "difficulty": "🌟🌟，海外网站，支持谷歌账号登录，不需要外国☎️验证",
-    "description": "除了PPT生成外，还支持直接生成网页，还可以直接发布网址。"
   },
   {
     "name": "llElevenLabs",
@@ -946,30 +862,6 @@
     "price": "开源",
     "difficulty": "需要登得上Github",
     "description": "大佬花儿不哭的开源项目，本地部署，声音克隆效果非常不错。"
-  },
-  {
-    "name": "CosyVoice",
-    "category": "AI克隆音色",
-    "audience": "内容创作者",
-    "rating": "🌟🌟🌟",
-    "link": "https://github.com/FunAudioLLM/CosyVoice",
-    "platform": "电脑本地部署",
-    "free": "支持免费",
-    "price": "开源",
-    "difficulty": "需要登得上Github",
-    "description": "支持克隆音色和内置音色。提供文生音、声音克隆和音转音功能。最低配置要求为8GB显存，占用26GB空间。操作难度中等。特色包括3秒急速复刻和提示词语气功能。"
-  },
-  {
-    "name": "ChatTTS",
-    "category": "AI克隆音色",
-    "audience": "内容创作者",
-    "rating": "🌟🌟🌟",
-    "link": "https://github.com/2noise/ChatTTS",
-    "platform": "电脑本地部署",
-    "free": "支持免费",
-    "price": "开源",
-    "difficulty": "需要登得上Github",
-    "description": "它支持文生音，但没有声音克隆和音转音功能。它的硬件要求最低，需要至少4GB显存和9GB的存储空间。操作难度低。"
   },
   {
     "name": "HeyGen",
