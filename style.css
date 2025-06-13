@@ -1,0 +1,272 @@
+/* Import a modern font for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Define a color palette and other variables */
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --background-color: #f8f9fa;
+  --card-background-color: #ffffff;
+  --text-color: #343a40;
+  --light-text-color: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  position: sticky; /* 新增：使元素变为“粘性”定位 */
+  top: 0; /* 新增：滚动时，将其固定在屏幕顶部 */
+  z-index: 1000; /* 新增：确保 header 在其他内容之上，不会被遮挡 */
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--card-background-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  border-radius: 0px 0px 30px 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--text-color);
+}
+
+/* 新增：包裹右侧控件的容器 */
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 修改：将搜索框和分类筛选的样式合并 */
+#searchInput, #categoryFilter {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  min-width: 200px;
+  background-color: #fff; /* 确保背景色一致 */
+  font-family: 'Inter', sans-serif; /* 确保字体一致 */
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* 修改：合并 focus 样式 */
+#searchInput:focus, #categoryFilter:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styles (已删除，样式可保留或删除) */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Main Tool Container - Constrained width */
+#toolContainer {
+  max-width: 1400px; /* 新增：设置内容区域的最大宽度 */
+  margin: 0 auto;    /* 新增：让容器在页面上水平居中 */
+  
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Tool Card Styles */
+.tool-card {
+  background: #f0f8ff; /* 淡蓝色背景 */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 20px; /* 更大的圆角 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border: 1px solid #d4eaf7;
+  display: flex;
+  flex-direction: column;
+  
+  /* --- 修改开始 --- */
+  align-items: flex-start; /* 修改：将 align-items 从 center 改为 flex-start (左对齐) */
+  text-align: left;      /* 修改：将 text-align 从 center 改为 left */
+  /* --- 修改结束 --- */
+
+  position: relative; /* 用于 Logo 圆圈的定位 */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 顶部 Logo 圆圈的样式 */
+.tool-logo-circle {
+  position: absolute;
+  top: -25px; /* 向上偏移，实现重叠效果 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #fff;
+}
+
+/* 圆圈内部 Logo 图片的样式 */
+.tool-logo-circle img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain; /* 确保 Logo 完整显示且不拉伸 */
+}
+
+/* 卡片标题样式 */
+.tool-card h3 {
+  margin: 0;
+  margin-top: 1.5rem; /* 为顶部的 Logo 留出空间 */
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.tool-card h3 a {
+  text-decoration: none;
+  color: #0d47a1; /* 深蓝色 */
+}
+
+/* 卡片描述文字样式 */
+.tool-card p {
+  margin: 0.15rem 0 0.5rem 0; /* 上下边距 */
+  color: #556c8b; /* 灰蓝色 */
+  font-size: 0.85rem;
+  line-height: 1.5;
+  flex-grow: 1; /* 让描述文字占据多余空间，将按钮推到底部 */
+  width: 100%;       /* 让标题和描述的容器宽度为卡片的90% */
+  text-align: left; /* 将容器内的文字左对齐 */
+}
+
+/* 卡片底部按钮样式 */
+.card-button {
+  display: inline-block;
+  background-color: #1976d2; /* 主蓝色 */
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 50px; /* 药丸形状 */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.card-button:hover {
+  background-color: #1565c0; /* 深一点的蓝色 */
+  transform: translateY(-2px);
+}
+
+/* Hidden class utility */
+.hidden {
+  display: none !important; 
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  gap: 0.75rem; /* 图标和标题之间的间距 */
+  margin-bottom: 1rem; /* 头部和下方内容的间距 */
+}
+
+.tool-icon {
+  width: 24px;   /* 设置图标宽度 */
+  height: 24px;  /* 设置图标高度 */
+  object-fit: contain; /* 保持图标比例 */
+  flex-shrink: 0; /* 防止图标被压缩 */
+}
+
+/* 移除原 h3 的下边距，因为我们加到了 .card-header 上 */
+.tool-card h3 {
+  margin: 0;
+}
+/* --- 新增：自定义下拉菜单样式 --- */
+
+/* 1. 给包裹器设置相对定位，作为自定义箭头的定位参考 */
+.select-wrapper {
+  position: relative;
+}
+
+/* 2. 使用 ::after 伪元素创建自定义箭头 */
+.select-wrapper::after {
+  content: '▼'; /* 使用一个向下的小三角符号作为箭头 */
+  font-size: 0.7rem; /* 调整箭头的大小 */
+  color: #555;      /* 调整箭头的颜色 */
+  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* 让箭头垂直居中 */
+  
+  /* * 关键在这里！
+   * right 的值越大，箭头就越往左边移动。
+   * 你可以修改 1.4rem 为 1.2rem 或 1.6rem 来微调位置。
+   */
+  right: 1.4rem; 
+
+  pointer-events: none; /* 让鼠标可以“穿透”箭头，点击到下面的下拉菜单 */
+}
+
+/* 3. 隐藏浏览器默认的下拉箭头 */
+#categoryFilter {
+  -webkit-appearance: none; /* 兼容 Webkit 内核浏览器 (Chrome, Safari) */
+  -moz-appearance: none;    /* 兼容 Firefox */
+  appearance: none;         /* 标准属性 */
+
+  /* 增加右侧内边距，防止文字和我们的自定义箭头重叠 */
+  padding-right: 2.5rem;
+}
+
+/* 修复：在某些浏览器上，IE的清除按钮可能会出现 */
+#categoryFilter::-ms-expand {
+    display: none;
+}
