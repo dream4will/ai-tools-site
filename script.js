@@ -1,41 +1,33 @@
-console.log("脚本开始运行。");
+let tools = []; // 用于存储所有工具数据的原始列表
 
-let tools = []; 
-
+// 1. 初始化：获取数据，填充分类，并设置事件监听
 fetch('tools.json')
-  .then(res => {
-    console.log("1. fetch 'tools.json' 成功，服务器响应:", res);
-    if (!res.ok) {
-        console.error("错误：服务器未能正常返回 tools.json。状态码: " + res.status);
-    }
-    return res.json();
-  })
+  .then(res => res.json())
   .then(data => {
-    console.log("2. 成功解析 JSON 数据，获取到的工具数量:", data.length);
     tools = data;
-    populateCategories(tools);
-    renderTools(tools);
-    setupEventListeners();
+    populateCategories(tools); // 填充分类下拉菜单
+    renderTools(tools); // 初始渲染所有工具
+    setupEventListeners(); // 设置筛选事件的监听
   })
   .catch(error => {
-    console.error("在获取或解析 tools.json 时发生严重错误:", error);
+    console.error("在获取或解析 tools.json 时发生错误:", error);
   });
 
+// 2. 动态填充分类下拉菜单
 function populateCategories(toolList) {
-  console.log("3. 正在执行 populateCategories 函数，填充下拉菜单...");
   const categoryFilter = document.getElementById('categoryFilter');
-  if (!categoryFilter) {
-      console.error("错误：在HTML中找不到 id 为 'categoryFilter' 的元素。");
-      return;
-  }
+  if (!categoryFilter) return; 
+
   const categories = new Set();
+  
   toolList.forEach(tool => {
     tool.category.split(',').forEach(cat => {
       categories.add(cat.trim());
     });
   });
+
   categoryFilter.innerHTML = ''; // 清空旧选项
-  
+
   const allOption = document.createElement('option');
   allOption.value = '所有分类';
   allOption.textContent = '所有分类';
@@ -47,35 +39,26 @@ function populateCategories(toolList) {
     option.textContent = category;
     categoryFilter.appendChild(option);
   });
-  console.log("下拉菜单填充完毕。");
 }
 
+// 3. 统一设置事件监听
 function setupEventListeners() {
-    console.log("4. 正在执行 setupEventListeners 函数，为筛选控件添加监听...");
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
 
     if (searchInput) {
         searchInput.addEventListener('input', applyFilters);
-        console.log("已为搜索框添加 'input' 监听。");
-    } else {
-        console.error("错误：找不到 id 为 'searchInput' 的元素。");
     }
-
     if (categoryFilter) {
         categoryFilter.addEventListener('change', applyFilters);
-        console.log("已为分类下拉菜单添加 'change' 监听。");
-    } else {
-        console.error("错误：找不到 id 为 'categoryFilter' 的元素（在 setupEventListeners 中）。");
     }
 }
 
+// 4. 应用所有筛选条件并重新渲染
 function applyFilters() {
-  console.log("--- 筛选操作触发 ---");
   const keyword = document.getElementById('searchInput').value.toLowerCase();
   const selectedCategory = document.getElementById('categoryFilter').value;
-  console.log(`当前筛选条件 -> 分类: "${selectedCategory}", 关键词: "${keyword}"`);
-  
+
   let filteredTools = tools;
 
   if (selectedCategory && selectedCategory !== '所有分类') {
@@ -92,10 +75,10 @@ function applyFilters() {
     );
   }
   
-  console.log(`筛选完毕，找到 ${filteredTools.length} 个结果。正在重新渲染页面...`);
   renderTools(filteredTools);
 }
 
+// 5. 渲染工具卡片的函数 (已移除“推荐”行)
 function renderTools(toolList) {
   const container = document.getElementById('toolContainer');
   container.innerHTML = "";
@@ -125,7 +108,6 @@ function renderTools(toolList) {
       <div class="card-info-details">
         <p><strong>分类：</strong>${tool.category}</p>
         <p><strong>受众：</strong>${tool.audience}</p>
-        <p><strong>推荐：</strong>${tool.rating}</p>
         <p><strong>平台：</strong>${tool.platform}</p>
         <p><strong>价格：</strong>${tool.free} / ${tool.price}</p>
         <p><strong>难度：</strong>${tool.difficulty}</p>
